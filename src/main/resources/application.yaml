@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+  config:
+    activate:
+      on-profile: mysql
+  batch:
+    job:
+      enabled: false
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: hyun1014
+      password: ${mysql.password}
+      jdbc-url: jdbc:mysql://localhost:3306/spring_batch?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=UTC
+  company:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: hyun1014
+      password: ${mysql.password}
+      jdbc-url: jdbc:mysql://localhost:3306/classicmodels?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=UTC
